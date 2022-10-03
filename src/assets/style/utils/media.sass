@@ -1,0 +1,39 @@
+@mixin mediaMobileMediumUp
+  @media all and (min-width: 320px)
+    @content
+
+@mixin mediaMobileLargeUp
+  @media all and (min-width: 576px)
+    @content
+
+@mixin mediaMobileOnly
+  @media all and (max-width: 767px)
+    @content
+
+@mixin mediaTabletVerticalUp
+  @media all and (min-width: 768px)
+    @content
+
+@mixin mediaTabletHorizontalUp
+  @media all and (min-width: 800px)
+    @content
+
+@mixin mediaTabletHorizontalDown
+  @media all and (max-width: 992px)
+    @content
+
+@mixin mediaDesktopSmallUp
+  @media all and (min-width: 992px)
+    @content
+
+@mixin mediaDesktopSmallOnly
+  @media all and (min-width: 992px) and (max-width: 1599px)
+    @content
+
+@mixin mediaDesktopMediumUp
+  @media all and (min-width: 1600px)
+    @content
+
+@mixin mediaDesktopLargeUp
+  @media all and (min-width: 2520px)
+    @content

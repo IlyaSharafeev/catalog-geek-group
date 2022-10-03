@@ -1,0 +1,51 @@
+@mixin single-text-truncation
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+@mixin multi-text-truncation($rows)
+  display: -webkit-box
+  -webkit-line-clamp: $rows
+  -webkit-box-orient: vertical
+  overflow: hidden
+
+@mixin center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin center-inline
+  display: inline-flex
+  justify-content: center
+  align-items: center
+
+@mixin start
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+
+.float-clear
+  clear: both
+
+.full-width
+  width: 100%
+
+.background_none
+  background: none !important
+
+.border-left_none
+  border-left: none !important
+
+@mixin aspectRatio($width, $height)
+  //aspect-ratio: $width / $height
+
+  //@supports not (aspect-ratio: $width / $height)
+  &::before
+    float: left
+    padding-top: calc(#{ $height } / #{ $width } * 100%)
+    content: ""
+
+  &::after
+    display: block
+    content: ""
+    clear: both

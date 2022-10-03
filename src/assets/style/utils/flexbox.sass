@@ -1,0 +1,36 @@
+@mixin flexboxHorizontal($gap)
+  display: flex
+  flex-direction: row
+  gap: $gap
+
+  //& > *
+  //  margin-right: $gap
+  //  margin-bottom: 0
+  //
+  //& > :last-child
+  //  margin-right: 0
+  //  margin-bottom: 0
+  //
+  .flex-no-gap
+    margin-bottom: 0
+    margin-right: 0
+
+@mixin flexboxVertical($gap)
+  display: flex
+  flex-direction: column
+  gap: $gap
+
+  //& > *
+  //  margin-bottom: $gap
+  //  margin-right: 0
+  //
+  //& > :last-child
+  //  margin-bottom: 0
+  //  margin-right: 0
+
+  .flex-no-gap
+    margin-bottom: 0
+    margin-right: 0
+
+.flex-no-gap
+  margin: 0 !important

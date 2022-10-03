@@ -1,0 +1,72 @@
+.header-catalog
+  padding: 23px 0
+
+  @include mediaMobileMediumUp
+    @include flexboxVertical(15px)
+
+  @include mediaDesktopSmallUp
+    @include center
+    @include flexboxHorizontal(0)
+
+.header-catalog__logo
+  //padding: 30px 0
+
+.header-catalog__icons
+  @include flexboxHorizontal(16px)
+
+.header-catalog__icon
+  position: relative
+  width: 20px
+
+.header-catalog__icon-badge
+  width: 14px
+  height: 14px
+  position: absolute
+  top: -6px
+  right: -7px
+  background: #EFF1F1
+  border: 2.4px solid #FFFFFF
+  border-radius: 100%
+  font-family: 'Stolzl', 'sans-serif'
+  font-style: normal
+  font-weight: 400
+  font-size: 10px
+  line-height: 150%
+  padding-left: 1px
+  @include center
+
+.header-catalog__icon-badge_red
+  background: #FF5449
+  color: #FFFFFF
+
+.header-catalog__menu
+  padding-top: 10px
+  @include flexboxVertical(10px)
+  @include center
+
+  @include mediaDesktopSmallUp
+    @include flexboxHorizontal(24px)
+    padding-top: initial
+
+.header-catalog__search-input
+  color: #5C5F60
+  font-family: 'Stolzl', 'sans-serif'
+  font-style: normal
+  font-weight: 400
+  font-size: 12px
+
+.header-catalog__menu-button
+  min-width: 129px
+  max-height: 38px
+
+.header-catalog__menu-search-form
+  @include mediaMobileMediumUp
+    @include flexboxVertical(10px)
+    width: 100%
+  @include mediaTabletVerticalUp
+    @include flexboxHorizontal(24px)
+    flex: 1
+
+.header-catalog__menu-icons
+  @include flexboxHorizontal(37px)
+  @include center

@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <BannerPhrase/>
+    <Header v-if="true"/>
+    <Divider v-if="true"/>
+    <ClothingCatalogPage v-if="false"/>
+  </div>
+  <Footer/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import "@/assets/style/index.sass";
+import Header from "@/components/Header";
+import BannerPhrase from "@/components/Banners/BannerPhrase";
+import Footer from "@/components/Footer";
+import Divider from "@/components/Divider";
+import ClothingCatalogPage from "@/components/ClothingCatalogPage";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ClothingCatalogPage,
+    Divider,
+    Footer,
+    Header,
+    BannerPhrase
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
